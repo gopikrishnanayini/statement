@@ -1,0 +1,27 @@
+<div class="jumbotron">
+ <div class="container text-center">
+  <% if user_signed_in? %>
+    <h1>Welcome back, <%= current_user.email %> </h1>
+    <p class="lead">
+      You have signed in! You can add income and expenses transactions click below links to add transactions
+    </p>
+    <%= link_to "Income", incomes_index_path, :class => 'btn btn-large btn-primary' %>
+    <%= link_to "Expenses", expenses_index_path, :class => 'btn btn-large btn-primary' %>
+    <%= link_to "Transactions", transactions_report_path, :class => 'btn btn-large btn-primary' %>
+  <% else %>
+    <h1>Welcome, new user!</h1>
+    <p class="lead">
+      You must sign in or sign up before you can access your income and expenses.
+    </p>
+    <div class="row-fluid">
+      <div class="span6">
+        <%= link_to "Sign In", new_user_session_path, :class => "btn btn-success" %>
+      </div>
+      <div class="span6">
+        <%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-success" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
+

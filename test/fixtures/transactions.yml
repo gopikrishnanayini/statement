@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  enter_date: 2017-05-20
+  transactionable_id: 1
+  transactionable_type: MyString
+
+two:
+  amount: 1
+  enter_date: 2017-05-20
+  transactionable_id: 1
+  transactionable_type: MyString

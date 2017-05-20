@@ -1,0 +1,16 @@
+<%= form_for @expense do |f| %>
+  <div class="form-group">
+    <%= f.label :type_of_income_and_expense, "Type Of Income" %>
+    <%= f.text_field :type_of_income_and_expense, class: "form-control", placeholder: "Enter the type of expense" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :amount %>
+    <%= f.text_field :amount, class: "form-control", placeholder: "Enter the amount" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :enter_date %>
+    <%= f.text_field :enter_date, class: "form-control", "data-provide" => 'datepicker', placeholder: "Enter the date" %>
+  </div>
+  <%= f.hidden_field :transactionable_type, :value => "expense" %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

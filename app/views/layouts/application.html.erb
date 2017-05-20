@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Statement</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container-narrow">
+  <div class="masthead">
+    <%= render 'layouts/user_header' %>
+    <h3 class="muted"><%= link_to "Income and Expenditure", root_path %></h3>
+    <h5 class="muted">Everyone is always in favour of general economy and particular expenditure.</h5>
+  </div>
+  <hr />
+  <%= yield %>
+</div>
+</body>
+</html>

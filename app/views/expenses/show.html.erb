@@ -1,0 +1,9 @@
+<table class="table table-bordered table-striped">
+      <tr>
+        <td><%= @expense.type_of_income_and_expense %></td>
+        <td><%= @expense.amount %></td>
+        <td><%= @expense.enter_date %></td>
+        <td><%= link_to "Edit", expenses_edit_path(@expense), class:"btn btn-default" %></td>
+        <td><%= link_to "Back", expenses_index_path, class:"btn btn-default" %></td>
+      </tr>
+</table>
