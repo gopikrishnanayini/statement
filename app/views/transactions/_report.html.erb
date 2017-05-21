@@ -11,6 +11,7 @@
       <th>Type Of Income</th>
       <th>Amount</th>
       <th>Date</th>
+      <th>Credit/Debit</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -20,6 +21,11 @@
           <td><%= report.type_of_income_and_expense %></td>
           <td><%= report.amount %></td>
           <td><%= report.enter_date %></td>
+          <% if report.transactionable_type == "income" %>
+          <td>Credit</td>
+          <% else %>
+          <td>Debit</td>
+          <% end %>
         </tr>
       <% end %>
     <% end %>
