@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   get 'about/index'
 
   get 'transactions/report'
+
+  get 'transactions/report_search'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,7 @@
+<%= form_for @transaction do |f| %>
+  <div class="form-group">
+    <%= f.label :type_of_income %>
+    <%= f.text_field :type_of_income, class: "form-control", placeholder: "Enter the type of income" %>
+  </div>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,27 @@
+<table class="table table-bordered table-striped">
+    <% if @reports.count == 0 %>
+      <tr>
+        <td colspan="3">
+          No transactions found. Please select other dates.
+        </td>
+      </tr>
+    <% else %>
+  <thead>
+    <tr>
+      <th>Type Of Income</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @reports.each do |report| %>
+        <tr>
+          <td><%= report.type_of_income_and_expense %></td>
+          <td><%= report.amount %></td>
+          <td><%= report.enter_date %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

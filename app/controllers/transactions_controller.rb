@@ -53,8 +53,21 @@ class TransactionsController < ApplicationController
   end
 
   def report
-  	@report = Transaction.this_month
+  	# @reports = Transaction.report_search(params[:start_date], params[:end_date])
+   #  respond_to do |format|
+   #    format.html
+   #    format.js
   end
+
+  def report_search
+    @reports = Transaction.report_search(params[:start_date], params[:end_date])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  end
+
 private
   def income_expense_params
     params.require(:transaction).permit!

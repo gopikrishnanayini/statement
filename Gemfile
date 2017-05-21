@@ -28,6 +28,7 @@ gem 'devise'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry-byebug', '~> 3.4'
 gem 'bootstrap-datepicker-rails'
+gem 'american_date', '~> 1.1', '>= 1.1.1'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
