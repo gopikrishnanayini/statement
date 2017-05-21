@@ -4,7 +4,10 @@
     <%= text_field_tag 'start_date' ,@from_date, "data-provide" => 'datepicker', class: "form-control", placeholder: "Enter from date" %>
     <%= label_tag "To Date" %>
     <%= text_field_tag 'end_date' ,@from_date, "data-provide" => 'datepicker', class: "form-control", placeholder: "Enter from date" %>
-  </div>
-  <button type='submit' id="report_filter">Submit</button>
-<% end %>
+    <br />
+     <button type='submit' id="report_filter">Submit</button>
+ <% end %>
 <div id="report"></div>
+<br/>
+<%= link_to "Download Pdf",transactions_download_pdf_path(:report=> @report, :format=> 'pdf'), id: "dowload_report", class: "btn btn-primary" %>
+<%#= link_to "Download Csv",transactions_download_csv_path(:report=> @report, :format=> 'csv'), id: "dowload_report_csv", class: "btn btn-primary" %>

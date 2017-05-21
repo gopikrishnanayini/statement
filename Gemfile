@@ -29,6 +29,9 @@ gem 'devise'
 gem 'pry-byebug', '~> 3.4'
 gem 'bootstrap-datepicker-rails'
 gem 'american_date', '~> 1.1', '>= 1.1.1'
+gem 'prawn', '~> 2.1'
+gem 'prawn-table', '~> 0.1.0'
+gem 'wicked_pdf'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
